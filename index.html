@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = prompt("enter first side");
+        var b = prompt("enter 2nd side");
+        var c = prompt("enter 3rd side");
+        function determineTriangle() {
+            let triangle;
+            if (isNaN(a) || isNaN(b) || isNaN(c)){
+                triangle = "Please use numerical inputs";
+            } else if (a==b && b==c) {
+                triangle = "The triangle is EQUILATERAL";
+            } else if (a!==b && b!==c && a!==c) {
+                triangle = "The triangle is SCALENE";
+            } else {
+                triangle = "The triangle is ISOSCELES";
+            }
+            return triangle;
+        }
+        var x = determineTriangle(a, b, c);
+        window.alert(x);
+    </script>
+</body>
+</html>
